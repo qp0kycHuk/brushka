@@ -7,6 +7,7 @@ import toggle from 'npm-kit-toggle';
 import ripple from 'npm-kit-ripple';
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
 import inputmask from './js/inputmask'
+import yandexMap from './js/yandex-map'
 
 
 import 'npm-kit-ripple/index.css';
@@ -24,6 +25,7 @@ window.ripple = ripple
 window.addEventListener('DOMContentLoaded', () => loadHandler())
 
 function loadHandler() {
+	yandexMap.init()
 	fancybox.init();
 	showPass.init();
 	rangeSlider.init()
