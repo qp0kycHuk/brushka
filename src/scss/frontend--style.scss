@@ -135,3 +135,49 @@ body {
 	}
 
 }
+
+.advantages {
+	padding-top: 67px;
+	padding-bottom: 98px;
+	background-color: var(--bg3);
+	&__title {
+		margin-bottom: 70px;
+	}
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 50px;
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+	}
+	&__pic {
+		min-width: 75px;
+		height: 75px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgba(102, 12, 17, 0.4) 100%), #E84139;
+		border-radius: 12px;
+		font-size: 52px;
+	}
+
+	@media(max-width: $lg) {
+		&__items {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media(max-width: $md) {
+		&__title {
+			margin-bottom: 50px;
+		}
+		&__items {
+			grid-template-columns: 1fr;
+			grid-gap: 30px;
+			max-width: 330px;
+			margin: 0 auto;
+		}
+	}
+}
