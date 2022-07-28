@@ -631,3 +631,31 @@ body {
 		height: 400px;
 	}
 }
+
+.footer {
+	display        : flex;
+	align-items    : center;
+	justify-content: space-between;
+	background     : var(--bg-3);
+
+	&__logo {
+		display    : flex;
+		align-items: center;
+
+		&-img {
+			width       : 32px;
+			margin-right: 20px;
+		}
+	}
+
+	@media(max-width: $lg) {
+		& {
+			flex-direction: column;
+			text-align    : center;
+		}
+
+		&__text {
+			margin-top: 15px;
+		}
+	}
+}
