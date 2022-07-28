@@ -88,18 +88,37 @@ body {
 
 		&__img {
 			margin-right: 20px;
+			width       : 46px;
+
+			@media(max-width:$md) {
+				margin-right: 12px;
+				width       : 36px;
+			}
+
+			@media(max-width:$sm) {
+				margin-right: 0;
+			}
 		}
 
 		&__title {
 			font-weight: 400;
 			font-size  : 24px;
 			font-family: var(--font-alt);
+
+
+			@media(max-width:$sm) {
+				display: none;
+			}
 		}
 
 		&__subtitle {
 			font-weight: 400;
 			font-size  : 14px;
 			opacity    : .6;
+
+			@media(max-width:$md) {
+				display: none;
+			}
 		}
 	}
 
@@ -108,15 +127,36 @@ body {
 		align-items: center;
 
 		&__img {
-			min-width        : 42px;
+			min-width    : 42px;
 			width        : 42px;
 			height       : 42px;
 			border-radius: 12px;
 			margin-right : 20px;
+
+			display        : flex;
+			align-items    : center;
+			justify-content: center;
+			color          : #fff;
+			font-size      : 18px;
+
+			@media(max-width:$md) {
+				min-width   : 36px;
+				width       : 36px;
+				height      : 36px;
+				margin-right: 12px;
+			}
+		}
+
+		&--address {
+			@media(max-width:$lg) {
+				display: none;
+			}
 		}
 
 		&--address &__img {
 			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgba(102, 12, 17, 0.4) 100%), #E84139;
+
+
 		}
 
 		&--phone &__img {
