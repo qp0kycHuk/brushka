@@ -26,7 +26,7 @@
 	--media-sm: #{$sm};
 
 	--font-base: 'Inter', Arial, Helvetica, sans-serif;
-	--font-alt: 'Oranienbaum', 'Times New Roman', Times, serif;
+	--font-alt : 'Oranienbaum', 'Times New Roman', Times, serif;
 
 	--zi-l1: 321;
 	--zi-l2: 322;
@@ -73,4 +73,55 @@ body {
 	.active-enabled {
 		display: flex !important;
 	}
+}
+
+.header {
+	display       : flex;
+	align-items   : center;
+	background    : var(--bg3);
+	padding-top   : 14px;
+	padding-bottom: 14px;
+
+	&-logo {
+		display    : flex;
+		align-items: center;
+
+		&__img {
+			margin-right: 20px;
+		}
+
+		&__title {
+			font-weight: 400;
+			font-size  : 24px;
+			font-family: var(--font-alt);
+		}
+
+		&__subtitle {
+			font-weight: 400;
+			font-size  : 14px;
+			opacity    : .6;
+		}
+	}
+
+	&-contact {
+		display    : flex;
+		align-items: center;
+
+		&__img {
+			min-width        : 42px;
+			width        : 42px;
+			height       : 42px;
+			border-radius: 12px;
+			margin-right : 20px;
+		}
+
+		&--address &__img {
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgba(102, 12, 17, 0.4) 100%), #E84139;
+		}
+
+		&--phone &__img {
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgba(102, 12, 17, 0.4) 100%), #E71B24;
+		}
+	}
+
 }
