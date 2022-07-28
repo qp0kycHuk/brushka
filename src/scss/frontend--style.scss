@@ -17,8 +17,8 @@
 
 	--spacing: 4px;
 
-	--radius-small : 4px;
-	--radius-middle: 8px;
+	--radius-small : 12px;
+	--radius-middle: 12px;
 	--radius-large : 12px;
 
 	--media-lg: #{$lg};
@@ -98,18 +98,37 @@ body {
 
 		&__img {
 			margin-right: 20px;
+			width       : 46px;
+
+			@media(max-width:$md) {
+				margin-right: 12px;
+				width       : 36px;
+			}
+
+			@media(max-width:$sm) {
+				margin-right: 0;
+			}
 		}
 
 		&__title {
 			font-weight: 400;
 			font-size  : 24px;
 			font-family: var(--font-alt);
+
+
+			@media(max-width:$sm) {
+				display: none;
+			}
 		}
 
 		&__subtitle {
 			font-weight: 400;
 			font-size  : 14px;
 			opacity    : .6;
+
+			@media(max-width:$md) {
+				display: none;
+			}
 		}
 	}
 
@@ -123,10 +142,31 @@ body {
 			height       : 42px;
 			border-radius: 12px;
 			margin-right : 20px;
+
+			display        : flex;
+			align-items    : center;
+			justify-content: center;
+			color          : #fff;
+			font-size      : 18px;
+
+			@media(max-width:$md) {
+				min-width   : 36px;
+				width       : 36px;
+				height      : 36px;
+				margin-right: 12px;
+			}
+		}
+
+		&--address {
+			@media(max-width:$lg) {
+				display: none;
+			}
 		}
 
 		&--address &__img {
 			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgba(102, 12, 17, 0.4) 100%), #E84139;
+
+
 		}
 
 		&--phone &__img {
@@ -179,5 +219,58 @@ body {
 			max-width: 330px;
 			margin: 0 auto;
 		}
+	}
+}
+
+.started {
+	background    : linear-gradient(83.28deg, #660C11 0%, rgba(0, 0, 0, 0) 100%), #E71B24;
+	background    : linear-gradient(83.28deg, #660C11 0%, rgba(0, 0, 0, 0) 100%), #E84139;
+
+	display       : flex;
+	align-items   : center;
+	padding-top   : 82px;
+	padding-bottom: 86px;
+
+	&__content {
+		color         : #FFFFFF;
+		display       : flex;
+		flex-direction: column;
+		align-items   : flex-start;
+	}
+
+	&__badge {
+		display      : flex;
+		align-items  : center;
+		margin-bottom: 28px;
+		background   : var(--bg3);
+		color        : var(--color-text);
+		border-radius: 60px;
+		font-weight  : 600;
+		font-size    : 14px;
+		padding      : 5px 12px;
+	}
+
+	&__title {
+		font-family: var(--font-alt);
+		font-weight: 400;
+		font-size  : 56px;
+
+		span {
+			font-family: inherit;
+		}
+	}
+
+	&__description {
+		margin-top: 28px;
+	}
+
+	&__form {
+		width: 420px;
+		padding      : 48px 42px;
+		border-radius: 12px;
+		margin-left  : auto;
+		background   : #FFFFFF;
+		border       : 1px solid #F1F1F1;
+		box-shadow   : 0px 16px 20px rgba(35, 35, 35, 0.08);
 	}
 }
