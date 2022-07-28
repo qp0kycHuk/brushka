@@ -178,7 +178,7 @@ body {
 
 .advantages {
 	padding-top     : 67px;
-	padding-bottom  : 98px;
+	padding-bottom  : 50px;
 	background-color: var(--bg3);
 
 	&__title {
@@ -214,6 +214,11 @@ body {
 	}
 
 	@media(max-width: $md) {
+		& {
+			padding-top   : 40px;
+			padding-bottom: 25px;
+		}
+
 		&__title {
 			margin-bottom: 50px;
 		}
@@ -277,5 +282,106 @@ body {
 		background   : #FFFFFF;
 		border       : 1px solid #F1F1F1;
 		box-shadow   : 0px 16px 20px rgba(35, 35, 35, 0.08);
+	}
+}
+
+.approach {
+	padding-top     : 50px;
+	padding-bottom  : 35px;
+	background-color: var(--bg3);
+
+	&__block {
+		background   : linear-gradient(250.97deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 62.82%), #F3F3F3;
+		border-radius: 12px;
+		display      : flex;
+		align-items  : center;
+		grid-gap     : 50px;
+	}
+
+	&__pic {
+		min-width       : 350px;
+		height          : 475px;
+		background-color: #D6D6D6;
+		border-radius   : 12px;
+		overflow        : hidden;
+		position        : relative;
+	}
+
+	&__img {
+		position  : absolute;
+		top       : 0;
+		left      : 0;
+		width     : 100%;
+		height    : 100%;
+		object-fit: cover;
+	}
+
+	&__content {
+		display       : flex;
+		flex-direction: column;
+	}
+
+	&__title {
+		text-align: left;
+		font-size : 42px;
+	}
+
+	&__die {
+		display      : flex;
+		align-items  : center;
+		background   : linear-gradient(89.04deg, #FFFFFF 51.57%, rgba(255, 255, 255, 0.3) 100.14%);
+		border-radius: 12px;
+	}
+
+	&__like {
+		font-size: 32px;
+	}
+
+	@media(max-width: $lg) {
+		&__block {
+			flex-direction: column;
+			align-items   : flex-start;
+			grid-gap      : 0;
+		}
+
+		&__pic {
+			min-width    : auto;
+			width        : 100%;
+			max-width    : 400px;
+			height       : 350px;
+			margin-bottom: 30px;
+		}
+
+		&__text br {
+			display: none;
+		}
+	}
+
+	@media(max-width: $md) {
+		& {
+			padding-top   : 30px;
+			padding-bottom: 30px;
+		}
+
+		&__block {
+			padding      : 15px;
+			border-radius: 0;
+			margin       : 0 -15px;
+		}
+
+		&__title {
+			font-size: 36px;
+		}
+
+		&__die {
+			flex-direction: column;
+			padding       : 15px;
+			text-align    : center;
+		}
+
+		&__like {
+			margin-right : 0;
+			margin-bottom: 15px;
+		}
 	}
 }
