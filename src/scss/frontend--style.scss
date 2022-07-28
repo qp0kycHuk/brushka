@@ -75,6 +75,16 @@ body {
 	}
 }
 
+.title {
+	font-size  : 56px;
+	text-align : center;
+	font-weight: 400;
+
+	@media(max-width: $md) {
+		font-size: 36px;
+	}
+}
+
 .header {
 	display       : flex;
 	align-items   : center;
