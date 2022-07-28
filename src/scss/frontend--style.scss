@@ -75,6 +75,16 @@ body {
 	}
 }
 
+.title {
+	font-size  : 56px;
+	text-align : center;
+	font-weight: 400;
+
+	@media(max-width: $md) {
+		font-size: 36px;
+	}
+}
+
 .header {
 	display       : flex;
 	align-items   : center;
@@ -108,7 +118,7 @@ body {
 		align-items: center;
 
 		&__img {
-			min-width        : 42px;
+			min-width    : 42px;
 			width        : 42px;
 			height       : 42px;
 			border-radius: 12px;
