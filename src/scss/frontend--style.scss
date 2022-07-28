@@ -2,14 +2,14 @@
 @import '../ui/scss/_functions.scss';
 
 :root {
-	@include getColors(#D21C4B, "primary");
-	@include getColors(#CE9B44, "sec");
+	@include getColors(#B0141B, "primary");
+	@include getColors(#FFDA7B, "sec");
 	@include getColors(#0092E4, "blue");
-	@include getColors(#FF9820, "yellow");
+	@include getColors(#F8BE2A, "yellow");
 	@include getColors(#31A043, "green");
 	@include getColors(#EB5757, "red");
 	@include getColors(#828A99, "icon");
-	@include getColors(#333333, "text");
+	@include getColors(#1E1E1E, "text");
 
 	--bg1: #E9EAEC;
 	--bg2: #F4F5F6;
