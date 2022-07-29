@@ -37,6 +37,10 @@
 	--zi-l7: 327;
 	--zi-l8: 328;
 	--zi-l9: 329;
+
+
+
+	--root-from-2: 1.41421356237;
 }
 
 [data-theme="dark"] {
@@ -328,6 +332,7 @@ body {
 	}
 
 	&__form {
+		min-width    : 420px;
 		width        : 420px;
 		padding      : 48px 42px;
 		border-radius: 12px;
@@ -344,6 +349,7 @@ body {
 			padding-top   : 24px;
 			padding-bottom: 24px;
 			width         : 100%;
+			min-width: 0;
 		}
 
 		@media(max-width: $md) {
@@ -666,8 +672,18 @@ body {
 	padding-top   : 62px;
 	padding-bottom: 98px;
 
+
+	@media(max-width: $md) {
+		padding-top   : 42px;
+		padding-bottom: 42px;
+	}
+
 	&__title {
 		margin-bottom: 48px;
+
+		@media(max-width: $md) {
+			margin-bottom: 32px;
+		}
 	}
 
 	&-item {
@@ -829,6 +845,202 @@ body {
 		@media(max-width: $md) {
 			display: none;
 
+		}
+	}
+}
+
+.service {
+	background    : var(--bg1);
+	padding-top   : 64px;
+	padding-bottom: 92px;
+	position      : relative;
+	overflow      : hidden;
+
+	@media(max-width: $md) {
+		padding-top   : 42px;
+		padding-bottom: 42px;
+	}
+
+	&__content {
+		position: relative;
+		z-index : 2;
+	}
+
+	&__title {
+		margin-bottom: 48px;
+
+		@media(max-width: $md) {
+			margin-bottom: 32px;
+		}
+	}
+
+	&-item {
+		background: var(--bg3);
+
+		box-shadow   : 0px 10px 20px rgba(35, 35, 35, 0.04);
+		border-radius: 12px;
+		padding      : 8px;
+		display      : flex;
+		align-items  : center;
+
+		&__img {
+			min-width   : 204px;
+			width       : 204px;
+			margin-right: 48px;
+
+			border-radius: 16px;
+			overflow     : hidden;
+
+
+			@media(max-width: $md) {
+				min-width   : 124px;
+				width       : 124px;
+				margin-right: 18px;
+			}
+
+			@media(max-width: $sm) {
+				min-width   : 100px;
+				width       : 100px;
+				margin-right: 12px;
+			}
+		}
+	}
+
+	&-tiles {
+		position             : absolute;
+		display              : grid;
+		grid-template-columns: repeat(3, 100px);
+		grid-template-rows   : repeat(4, 100px);
+
+		@media(max-width: $lg) {
+			grid-template-columns: repeat(3, 80px);
+			grid-template-rows   : repeat(4, 80px);
+		}
+
+		@media(max-width: $md) {
+			grid-template-columns: repeat(3, 50px);
+			grid-template-rows   : repeat(4, 50px);
+		}
+
+		&--left {
+			bottom: 0;
+			left  : 0;
+		}
+
+		&--right {
+			right: 0;
+			top  : 0;
+		}
+	}
+}
+
+.pray {
+	background    : linear-gradient(83.28deg, #660C11 0%, rgba(0, 0, 0, 0) 100%), #E84139;
+	display       : flex;
+	align-items   : center;
+	padding-top   : 32px;
+	padding-bottom: 32px;
+	position      : relative;
+	overflow      : hidden;
+
+	@media(max-width: $lg) {
+		flex-direction: column;
+	}
+
+	&__content {
+		display       : flex;
+		flex-direction: column;
+		align-items   : flex-start;
+		position      : relative;
+		z-index       : 2;
+	}
+
+	&__title {
+		font-size    : 48px;
+		color        : #FFFFFF;
+		font-family  : var(--font-alt);
+		margin-bottom: 16px;
+
+		@media(max-width: $md) {
+			font-size: 32px;
+		}
+
+		span {
+			font-family: inherit;
+		}
+	}
+
+	&__sign {
+		font-size    : 38px;
+		color        : var(--color-primary);
+		font-family  : var(--font-alt);
+		background   : var(--bg3);
+		border-radius: 6px 0 0 6px;
+		padding      : 12px 15px;
+		position     : relative;
+
+		--height   : 72px;
+		height     : var(--height);
+		display    : flex;
+		align-items: center;
+
+		@media(max-width: $md) {
+			font-size: 24px;
+			--height : 48px;
+		}
+
+		@media(max-width: $sm) {
+			font-size: 20px;
+			--height : 42px;
+		}
+
+		&:before {
+			content      : '';
+			position     : absolute;
+			--size       : calc(var(--height) / var(--root-from-2));
+			width        : var(--size);
+			height       : var(--size);
+			left         : calc(100% - var(--size) / 2);
+			top          : calc(50% - var(--size) / 2);
+			border-radius: 6px;
+			background   : linear-gradient(45deg, rgba(0, 0, 0, 0) 50%, var(--bg3) 50%);
+			transform    : rotateZ(45deg) skew(10deg, 10deg) scale(0.9);
+		}
+	}
+
+	&__description {
+		margin-top: 40px;
+		color     : #fff;
+
+		@media(max-width: $lg) {
+			margin-top: 20px;
+		}
+	}
+
+	&-tiles {
+		position             : absolute;
+		display              : grid;
+		grid-template-columns: repeat(3, 100px);
+		grid-auto-rows       : 100px;
+
+		@media(max-width: $lg) {
+			grid-template-columns: repeat(3, 80px);
+			grid-auto-rows       : 80px;
+		}
+
+		@media(max-width: $md) {
+			grid-template-columns: repeat(3, 50px);
+			grid-auto-rows       : 50px;
+		}
+
+		&--left {
+			bottom: 0;
+			left  : 0;
+		}
+
+		&--right {
+			right: 0;
+			top  : 0;
 		}
 	}
 }
