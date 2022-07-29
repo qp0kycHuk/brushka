@@ -107,6 +107,11 @@ body {
 	padding-top   : 14px;
 	padding-bottom: 14px;
 
+	@media(max-width:$md) {
+		padding-top   : 6px;
+		padding-bottom: 6px;
+	}
+
 	&-logo {
 		display    : flex;
 		align-items: center;
@@ -126,10 +131,8 @@ body {
 		}
 
 		&__title {
-			font-weight: 400;
-			font-size  : 24px;
-			font-family: var(--font-alt);
-
+			font-weight: 500;
+			font-size: 22px;
 
 			@media(max-width:$sm) {
 				display: none;
@@ -360,7 +363,7 @@ body {
 			padding-top   : 24px;
 			padding-bottom: 24px;
 			width         : 100%;
-			min-width: 0;
+			min-width     : 0;
 		}
 
 		@media(max-width: $md) {
