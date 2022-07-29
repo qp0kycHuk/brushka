@@ -1,7 +1,7 @@
 // out:false
 .dialog {
   &-large {
-    width    : var(--section-width);
+    width    : 1200px;
     max-width: 100%;
 
     @media (max-width:$sm) {
