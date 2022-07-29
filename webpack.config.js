@@ -11,7 +11,7 @@ const htmlWebpackPluginDefaults = {
 }
 
 const pages = ['index.html', 'ui.html']
-const dialogs = ['dialog-large.html', 'dialog-middle.html', 'dialog-small.html', 'dialog-product.html', 'dialog-form.html']
+const dialogs = ['dialog-product.html', 'dialog-form.html']
 
 module.exports = {
   entry: './src/index.js',
