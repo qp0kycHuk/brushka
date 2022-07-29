@@ -1138,3 +1138,43 @@ body {
 		}
 	}
 }
+
+.-elem- {
+    transition-duration       : 0.5s;
+    transition-timing-function: linear;
+
+    &fade-:not(&show-) {
+        visibility: hidden;
+        opacity   : 0;
+    }
+
+    &scale-:not(&show-) {
+        transform: scale(0);
+        opacity  : 0;
+    }
+
+    &rotate-:not(&show-) {
+        transform: rotate(540deg);
+        opacity  : 0;
+    }
+
+    &up-:not(&show-) {
+        transform: translateY(50px);
+        opacity  : 0;
+    }
+
+    &down-:not(&show-) {
+        transform: translateY(-50px);
+        opacity  : 0;
+    }
+
+    &left-:not(&show-) {
+        transform: translateX(50px);
+        opacity  : 0;
+    }
+
+    &right-:not(&show-) {
+        transform: translateX(-50px);
+        opacity  : 0;
+    }
+}

@@ -8,6 +8,7 @@ import ripple from 'npm-kit-ripple';
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
 import inputmask from './js/inputmask'
 import yandexMap from './js/yandex-map'
+import scrolled from './js/scrolled'
 
 
 import 'npm-kit-ripple/index.css';
@@ -33,6 +34,7 @@ function loadHandler() {
 	toggle.init();
 	ripple.init();
 	theme.init();
+	scrolled.init()
 
 	ripple.attach('.btn')
 	ripple.attach('.waved')
