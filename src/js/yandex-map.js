@@ -2,7 +2,7 @@ import ymaps from 'ymaps'
 
 const init = () => {
 
-    let center = [57.80713456680198,28.347084499999927]
+    let center = [59.759718,30.769347]
 
     ymaps.load('https://api-maps.yandex.ru/2.1/?lang=ru_RU').then(maps => {
 
